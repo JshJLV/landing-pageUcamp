@@ -214,12 +214,13 @@ main {
 .top-brands {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .brand-logos {
-    flex: 40%;
+    width: 125px;
+    height: 50;
     margin: 10px;
     padding: 8px;
     height: 60px;
@@ -231,9 +232,9 @@ main {
 }
 
 .brand-logos img {
-    width: 100%;
-    max-height: 100%;
+    max-width: 100%;
     padding: 4px;
+    object-fit: cover;
 }
 
 #razer-logo {
@@ -290,12 +291,14 @@ footer {
     padding: 10px;
 }
 
-.newsletter-div label{
-    font-size: 24px;
+.newsletter-div h4{
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .newsletter-div input {
-    width: 75%;
+    width: 60%;
     padding: 8px;
     border: none;
     border-radius: 8px;
@@ -308,6 +311,11 @@ footer {
     border: none;
     background-color:  #1e8449 ;
     color: white;
+    width: 30%;
+}
+
+.newsletter-div button:hover {
+    cursor: pointer;
 }
 
 .social-networks-div {
@@ -329,6 +337,8 @@ footer {
     width: 100%;
 }
 
+/* seccion sobre nosotros y soporte */
+
 .aboutUs-getHelp {
     padding: 10px;
     border-top: 2px solid #ddd;
@@ -347,10 +357,12 @@ footer {
 
 .aboutUs-getHelp a {
     text-decoration: none;
+    color: black;
 }
 
 .dev-info {
     border-top: 2px solid #ddd;
     text-align: center;
     padding: 10px;
+    font-size: 12px;
 }
