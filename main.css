@@ -11,11 +11,13 @@
 
 .games-container {
     width: 150px;
-    max-width: 350px;
-    max-height: 450px;
     border-radius: 4px;
-    /* background-color: aquamarine; */
     border: 2px solid #eee;
+    transition: all 300ms;
+}
+
+.games-container:hover {
+    transform: scale(1.1);
 }
 
 .games-container p {
@@ -28,6 +30,11 @@
     width: 100%;
 }
 
+.games-container a {
+    text-decoration: none;
+    color: black;
+}
+
 .game-img {
     width: 100%;
 }
@@ -38,7 +45,6 @@ header {
     width: 100%;
     /* height: 150px; */
     padding: 10px;
-    /* background-color: #aaa; */
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #ddd;
@@ -60,7 +66,6 @@ header {
     justify-content: center;
     width: 100%;
     height: 60px;
-    background-color: blue;
     margin-bottom: 10px;
     display: none;
 }
@@ -72,7 +77,6 @@ header {
 }
 
 .searchbar-container {
-    /* background-color: beige; */
     width: 70%;
     height: 100%;
     padding: 8px;
@@ -94,12 +98,11 @@ header {
 .cart-account-link ul {
     display: flex;
     list-style: none;
-    /* background-color: beige; */
+    justify-content: space-around;
 }
 
 .cart-account-link ul > li {
     padding: 10px;
-    /* background-color: greenyellow; */
 }
 
 #cart-link img {
@@ -132,13 +135,13 @@ header {
     text-decoration: none;
     color: black;
     font-size: 14px;
+    transition: all 300ms;
 }
 
 /* contenido principal */
 
 main {
     width: 100%;
-    /* background-color: red; */
 }
 
 .main-wrapper {
@@ -158,7 +161,6 @@ main {
     width: 100%;
     max-height: 600px;
     margin: 0 auto;
-    background-color: beige;
 }
 
 .banner-container {
@@ -179,7 +181,7 @@ main {
     flex-direction: column;
 }
 
-.presales-section h3{
+.presales-section h3 {
     width: 100%;
     display: block;
     text-align: center;
@@ -225,10 +227,14 @@ main {
     padding: 8px;
     height: 60px;
     border: 1px solid #ccc;
-    /* margin-bottom: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 300ms;
+}
+
+.brand-logos:hover {
+    transform: scale(1.1);
 }
 
 .brand-logos img {
@@ -260,7 +266,6 @@ main {
 
 .best-sellers {
     width: 100%;
-    /* background-color: red; */
     display: flex;
     justify-content: space-around;
     gap: 15px 0px;
@@ -365,4 +370,151 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 12px;
+}
+
+/* media queries */
+
+@media (min-width: 490px) and (max-width: 600px) {
+    .games-container {
+        width: 200px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .games-container {
+        width: 200px;
+    }
+
+    .brand-logos {
+        width: 150px;
+        height: 75px;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 769px) {
+    .main-wrapper {
+        width: 85%;
+    }
+
+    .presales-container {
+        justify-content: space-between;
+    }
+
+    .best-sellers {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-wrapper {
+        flex-wrap: nowrap
+    }
+    
+    .img-container {
+        display: initial;
+        width: 20%;
+    }
+
+    .searchbar-container {
+        width: 80%;
+    }
+
+    .cart-account-link {
+        width: 20%;
+    }
+
+    .presales-section h3 {
+        margin: 14px 0px;
+        font-size: 28px;
+        padding: 14px;
+    }
+
+    .top-brands-section h3 {
+        margin: 14px 0px;
+        font-size: 28px;
+        padding: 14px;
+    }
+
+    .best-sellers-section h3 {
+        margin: 14px 0px;
+        font-size: 28px;
+        padding: 14px;
+    }
+
+    .brand-logos {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-wrapper {
+        width: 80%;
+        padding: 40px 0px;
+    }
+
+    .categories a {
+        font-size: 18px;
+    }
+
+    .categories a:hover {
+        color: red;
+    }
+
+    .banner-container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .games-container {
+        width: 200px;
+        margin-left: 30px;
+    }
+
+    .presales-container {
+        justify-content: space-between;
+    }
+
+    .top-brands {
+        justify-content: space-between;
+    }
+
+    .brand-logos {
+        width: 250px;
+        height: 100px;
+    }
+
+    .best-sellers {
+        justify-content: space-between;
+    }
+
+    .footer-wrapper {
+        flex-direction: row;
+    }
+    
+    .comunication-section {
+        flex-grow: 2;
+    }
+
+    .newsletter-div button {
+        width: 100px;
+    }
+
+    .aboutUs-getHelp {
+        flex-grow: 1;
+        border-top: initial;
+    }
+
+    .dev-info {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .games-container {
+        width: 175px;
+        gap: 10px;
+        margin-left: initial;
+        flex-wrap: nowrap;
+    }
 }
